@@ -615,7 +615,7 @@ const bikes: Bike[] = [
                 variant={viewMode === 'grid' ? 'default' : 'outline'}
                 size="icon"
                 onClick={() => setViewMode('grid')}
-                className={viewMode === 'grid' ? 'bg-yellow-400 hover:bg-yellow-500 text-white' : ''}
+                className={viewMode === 'grid' ? 'bg-blue-400 hover:bg-blue-500 text-white' : ''}
               >
                 <Grid className="w-4 h-4" />
               </Button>
@@ -623,7 +623,7 @@ const bikes: Bike[] = [
                 variant={viewMode === 'list' ? 'default' : 'outline'}
                 size="icon"
                 onClick={() => setViewMode('list')}
-                className={viewMode === 'list' ? 'bg-yellow-400 hover:bg-yellow-500 text-white' : ''}
+                className={viewMode === 'list' ? 'bg-blue-400 hover:bg-blue-500 text-white' : ''}
               >
                 <List className="w-4 h-4" />
               </Button>
@@ -647,7 +647,7 @@ const bikes: Bike[] = [
             </div>
 
             {/* Note Box */}
-            <div className="bg-yellow-100 border-l-4 border-yellow-400 text-yellow-700 p-3 rounded-md max-w-sm">
+            <div className="bg-blue-100 border-l-4 border-blue-400 text-blue-700 p-3 rounded-md max-w-sm">
               <p className="text-sm">
                 Note: To see all bikes, set the slider maximum to ₹{Math.max(...bikes.map(bike => bike.price)).toLocaleString()}.
               </p>
@@ -708,7 +708,7 @@ const bikes: Bike[] = [
                       <div className="flex gap-2">
                         <Button
                           onClick={() => handleViewDetails(bike)}
-                          className="flex-1 bg-yellow-400 hover:bg-yellow-500 text-white border-0 rounded-lg"
+                          className="flex-1 bg-blue-400 hover:bg-blue-500 text-white border-0 rounded-lg"
                         >
                           <Eye className="w-4 h-4 mr-1" /> View
                         </Button>
@@ -748,7 +748,7 @@ const bikes: Bike[] = [
                     </div>
                     <p className="text-gray-600 text-sm">{bike.description}</p>
                     <div className="flex gap-2 pt-2">
-                      <Button onClick={() => handleViewDetails(bike)} className="bg-yellow-400 hover:bg-yellow-500 text-white border-0 rounded-lg">
+                      <Button onClick={() => handleViewDetails(bike)} className="bg-blue-400 hover:bg-blue-500 text-white border-0 rounded-lg">
                         View Details
                       </Button>
                       <Button

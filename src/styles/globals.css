@@ -1,3 +1,4 @@
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -29,7 +30,7 @@
   --chart-2: #8b5cf6; /* Violet 500 */
   --chart-3: #06b6d4; /* Cyan 500 */
   --chart-4: #10b981; /* Emerald 500 */
-  --chart-5: #f59e0b; /* Amber 500 */
+  --chart-5: #241986; /* Amber 500 */
   --radius: 0.625rem;
   --sidebar: #ffffff; /* White */
   --sidebar-foreground: #1e293b; /* Slate 800 */
@@ -68,7 +69,7 @@
   --chart-2: #a78bfa; /* Violet 400 */
   --chart-3: #22d3ee; /* Cyan 400 */
   --chart-4: #34d399; /* Emerald 400 */
-  --chart-5: #fbbf24; /* Amber 400 */
+  --chart-5: #2e8dec; /* Amber 400 */
   --sidebar: #1e293b; /* Slate 800 */
   --sidebar-foreground: #f1f5f9; /* Slate 100 */
   --sidebar-primary: #60a5fa; /* Blue 400 */
@@ -128,6 +129,30 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Global button styles */
+.btn-primary {
+  background: linear-gradient(to right, #7f5af0, #5347ff); /* same as homepage accent */
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+/* Optional smaller button */
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
 }
 
 /**

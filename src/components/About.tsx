@@ -16,7 +16,7 @@ export function About() {
   const stats = [
     { icon: Users, label: 'Happy Customers', value: '50,000+', color: 'text-blue-600' },
     { icon: Globe, label: 'Cities Covered', value: '25+', color: 'text-green-600' },
-    { icon: Award, label: 'Awards Won', value: '15+', color: 'text-yellow-600' },
+    { icon: Award, label: 'Awards Won', value: '15+', color: 'text-blue-600' },
     { icon: TrendingUp, label: 'Bikes Sold', value: '1,00,000+', color: 'text-purple-600' }
   ];
 
@@ -83,7 +83,7 @@ export function About() {
         <div className="mb-16">
           <Card className="border-0 shadow-2xl overflow-hidden">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1600327713015-08077f65b388?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx8fHwxNzU4NzQ0MDAxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src="/bikes/show0.jpg"
               alt="Cycloroof showroom"
               className="w-full h-64 lg:h-96 object-cover"
             />
@@ -113,8 +113,8 @@ export function About() {
             <Card className="border-0 shadow-lg bg-white">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
-                    <Target className="w-6 h-6 text-yellow-600" />
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                    <Target className="w-6 h-6 text-blue-600" />
                   </div>
                   <h2 className="text-2xl font-bold text-gray-900">Our Mission</h2>
                 </div>
@@ -130,8 +130,8 @@ export function About() {
             <Card className="border-0 shadow-lg bg-white">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
-                    <Globe className="w-6 h-6 text-orange-600" />
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                    <Globe className="w-6 h-6 text-blue-600" />
                   </div>
                   <h2 className="text-2xl font-bold text-gray-900">Our Vision</h2>
                 </div>
@@ -153,7 +153,7 @@ export function About() {
             {values.map((value, index) => (
               <Card key={index} className="border-0 shadow-lg bg-white text-center hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="font-bold text-gray-900 mb-3">{value.title}</h3>
@@ -170,14 +170,14 @@ export function About() {
           <div className="bg-white rounded-2xl shadow-lg p-8">
             <div className="space-y-8">
               <div className="flex items-start">
-                <div className="w-4 h-4 bg-yellow-400 rounded-full mr-6 mt-2 flex-shrink-0"></div>
+                <div className="w-4 h-4 bg-blue-400 rounded-full mr-6 mt-2 flex-shrink-0"></div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">2020 - Foundation</h3>
                   <p className="text-gray-700">Cycloroof was founded with a vision to transform the two-wheeler marketplace in India.</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="w-4 h-4 bg-orange-400 rounded-full mr-6 mt-2 flex-shrink-0"></div>
+                <div className="w-4 h-4 bg-blue-400 rounded-full mr-6 mt-2 flex-shrink-0"></div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">2021 - Platform Launch</h3>
                   <p className="text-gray-700">Launched our digital platform with basic buying and selling features in 5 major cities.</p>
@@ -208,38 +208,17 @@ export function About() {
           </div>
         </section>
 
-        {/* Team */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 text-center mb-12">Leadership Team</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="border-0 shadow-lg bg-white text-center hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6">
-                  <ImageWithFallback
-                    src={member.image}
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h3 className="font-bold text-gray-900 mb-1">{member.name}</h3>
-                  <p className="text-orange-600 font-medium mb-2">{member.role}</p>
-                  <p className="text-gray-600 text-sm">{member.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
         {/* CTA */}
-        <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-8 text-white text-center">
+        <div className="bg-gradient-to-r from-blue-400 to-blue-500 rounded-2xl p-8 text-white text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">Join the Cycloroof Family</h2>
           <p className="text-lg mb-6 opacity-90">
             Experience the future of two-wheeler mobility with us. Your perfect ride awaits!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-orange-500 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors">
+            <button className="bg-white text-blue-500 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors">
               Start Your Journey
             </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-orange-500 px-8 py-3 rounded-lg font-medium transition-colors">
+            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-500 px-8 py-3 rounded-lg font-medium transition-colors">
               Contact Us
             </button>
           </div>

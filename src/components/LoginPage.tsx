@@ -27,13 +27,13 @@ export function LoginPage({ onLogin }: LoginPageProps) {
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 shadow-lg overflow-hidden">
   <img
-    src="https://images.unsplash.com/photo-1618172193622-07a1b08c3e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-    alt="VeloCity Logo"
+    src="/bikes/1.jpg"
+    alt="CycloRooF Logo"
     className="w-full h-full object-cover"
   />
 </div>
 
-          <h1 className="text-3xl font-bold text-primary mb-2">VeloCity</h1>
+          <h1 className="text-3xl font-bold text-primary mb-2">CycloRooF</h1>
           <p className="text-muted-foreground">Your two-wheeler, your way.</p>
         </div>
 

@@ -40,7 +40,7 @@ export function ComparisonTool({ bikes, onRemove, onNavigate }: ComparisonToolPr
           <Button
             variant="ghost"
             onClick={() => onNavigate('catalog')}
-            className="mb-6 hover:bg-yellow-50"
+            className="mb-6 hover:bg-blue-50"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Catalog
@@ -54,7 +54,7 @@ export function ComparisonTool({ bikes, onRemove, onNavigate }: ComparisonToolPr
             <p className="text-gray-600 mb-8">Add bikes from the catalog to start comparing them</p>
             <Button 
               onClick={() => onNavigate('catalog')}
-              className="bg-yellow-400 hover:bg-yellow-500 text-white border-0 px-8"
+              className="bg-blue-400 hover:bg-blue-500 text-white border-0 px-8"
             >
               Browse Bikes
             </Button>
@@ -73,7 +73,7 @@ export function ComparisonTool({ bikes, onRemove, onNavigate }: ComparisonToolPr
             <Button
               variant="ghost"
               onClick={() => onNavigate('catalog')}
-              className="mr-4 hover:bg-yellow-50"
+              className="mr-4 hover:bg-blue-50"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Catalog
@@ -84,7 +84,7 @@ export function ComparisonTool({ bikes, onRemove, onNavigate }: ComparisonToolPr
             </div>
           </div>
           {bikes.length > 0 && (
-            <Badge className="bg-yellow-100 text-yellow-800">
+            <Badge className="bg-blue-100 text-blue-800">
               {bikes.length} bike{bikes.length > 1 ? 's' : ''} selected
             </Badge>
           )}
@@ -120,17 +120,17 @@ export function ComparisonTool({ bikes, onRemove, onNavigate }: ComparisonToolPr
                     </Badge>
                     <h3 className="font-bold text-gray-900 mb-1">{bike.name}</h3>
                     <div className="flex items-center mb-2">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <Star className="w-4 h-4 text-blue-400 fill-current" />
+                      <Star className="w-4 h-4 text-blue-400 fill-current" />
+                      <Star className="w-4 h-4 text-blue-400 fill-current" />
+                      <Star className="w-4 h-4 text-blue-400 fill-current" />
                       <Star className="w-4 h-4 text-gray-300" />
                       <span className="text-sm text-gray-600 ml-2">(4.2)</span>
                     </div>
                     <div className="flex gap-2">
                       <Button 
                         size="sm"
-                        className="bg-yellow-400 hover:bg-yellow-500 text-white border-0 flex-1"
+                        className="bg-blue-400 hover:bg-blue-500 text-white border-0 flex-1"
                       >
                         <Calendar className="w-3 h-3 mr-1" />
                         Test Ride
@@ -177,7 +177,7 @@ export function ComparisonTool({ bikes, onRemove, onNavigate }: ComparisonToolPr
           ))}
 
           {/* Performance Comparison */}
-          <div className="p-6 bg-gradient-to-r from-yellow-50 to-orange-50">
+          <div className="p-6 bg-gradient-to-r from-blue-50 to-orange-50">
             <h3 className="font-bold text-gray-900 mb-4">Performance Summary</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {bikes.map((bike) => (
@@ -188,7 +188,7 @@ export function ComparisonTool({ bikes, onRemove, onNavigate }: ComparisonToolPr
                       <span className="text-gray-600">Value for Money:</span>
                       <div className="flex">
                         {[1, 2, 3, 4, 5].map((star) => (
-                          <Star key={star} className="w-3 h-3 text-yellow-400 fill-current" />
+                          <Star key={star} className="w-3 h-3 text-blue-400 fill-current" />
                         ))}
                       </div>
                     </div>
@@ -196,7 +196,7 @@ export function ComparisonTool({ bikes, onRemove, onNavigate }: ComparisonToolPr
                       <span className="text-gray-600">Fuel Efficiency:</span>
                       <div className="flex">
                         {[1, 2, 3, 4].map((star) => (
-                          <Star key={star} className="w-3 h-3 text-yellow-400 fill-current" />
+                          <Star key={star} className="w-3 h-3 text-blue-400 fill-current" />
                         ))}
                         <Star className="w-3 h-3 text-gray-300" />
                       </div>
@@ -205,7 +205,7 @@ export function ComparisonTool({ bikes, onRemove, onNavigate }: ComparisonToolPr
                       <span className="text-gray-600">Performance:</span>
                       <div className="flex">
                         {[1, 2, 3, 4, 5].map((star) => (
-                          <Star key={star} className="w-3 h-3 text-yellow-400 fill-current" />
+                          <Star key={star} className="w-3 h-3 text-blue-400 fill-current" />
                         ))}
                       </div>
                     </div>
@@ -223,27 +223,27 @@ export function ComparisonTool({ bikes, onRemove, onNavigate }: ComparisonToolPr
             <Button 
               onClick={() => onNavigate('calculators')}
               variant="outline"
-              className="border-gray-200 hover:bg-yellow-50 hover:border-yellow-300"
+              className="border-gray-200 hover:bg-blue-50 hover:border-blue-300"
             >
               EMI Calculator
             </Button>
             <Button 
               onClick={() => onNavigate('rentals')}
               variant="outline"
-              className="border-gray-200 hover:bg-yellow-50 hover:border-yellow-300"
+              className="border-gray-200 hover:bg-blue-50 hover:border-blue-300"
             >
               Check Rentals
             </Button>
             <Button 
               onClick={() => onNavigate('warranty')}
               variant="outline"
-              className="border-gray-200 hover:bg-yellow-50 hover:border-yellow-300"
+              className="border-gray-200 hover:bg-blue-50 hover:border-blue-300"
             >
               Warranty Info
             </Button>
             <Button 
               onClick={() => onNavigate('catalog')}
-              className="bg-yellow-400 hover:bg-yellow-500 text-white border-0"
+              className="bg-blue-400 hover:bg-blue-500 text-white border-0"
             >
               Add More Bikes
             </Button>

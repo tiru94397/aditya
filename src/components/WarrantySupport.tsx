@@ -29,7 +29,7 @@ export function WarrantySupport() {
       duration: '5 Years',
       price: '₹15,000',
       coverage: ['All Basic Coverage', 'Wear & Tear Parts', 'Accidental Damage', '24/7 Roadside Assistance'],
-      color: 'bg-yellow-100 text-yellow-800'
+      color: 'bg-blue-100 text-blue-800'
     },
     {
       name: 'Premium Care',
@@ -104,9 +104,9 @@ export function WarrantySupport() {
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Warranty Plans</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {warrantyPlans.map((plan, index) => (
-              <Card key={index} className={`border-0 shadow-lg ${index === 1 ? 'ring-2 ring-yellow-400 scale-105' : ''} bg-white relative overflow-hidden`}>
+              <Card key={index} className={`border-0 shadow-lg ${index === 1 ? 'ring-2 ring-blue-400 scale-105' : ''} bg-white relative overflow-hidden`}>
                 {index === 1 && (
-                  <div className="absolute top-0 left-0 right-0 bg-yellow-400 text-white text-center py-2 text-sm font-medium">
+                  <div className="absolute top-0 left-0 right-0 bg-blue-400 text-white text-center py-2 text-sm font-medium">
                     Most Popular
                   </div>
                 )}
@@ -129,7 +129,7 @@ export function WarrantySupport() {
                       </li>
                     ))}
                   </ul>
-                  <Button className={`w-full mt-6 ${index === 1 ? 'bg-yellow-400 hover:bg-yellow-500' : 'bg-gray-900 hover:bg-gray-800'} text-white border-0`}>
+                  <Button className={`w-full mt-6 ${index === 1 ? 'bg-blue-400 hover:bg-blue-500' : 'bg-gray-900 hover:bg-gray-800'} text-white border-0`}>
                     {plan.price === 'Free' ? 'Included' : 'Choose Plan'}
                   </Button>
                 </CardContent>
@@ -145,7 +145,7 @@ export function WarrantySupport() {
             {supportChannels.map((channel, index) => (
               <Card key={index} className="border-0 shadow-lg bg-white hover:shadow-xl transition-all duration-300 text-center">
                 <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <channel.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2">{channel.title}</h3>
@@ -156,7 +156,7 @@ export function WarrantySupport() {
                       {channel.availability}
                     </Badge>
                   </div>
-                  <Button className="w-full mt-4 bg-yellow-400 hover:bg-yellow-500 text-white border-0">
+                  <Button className="w-full mt-4 bg-blue-400 hover:bg-blue-500 text-white border-0">
                     Contact Now
                   </Button>
                 </CardContent>

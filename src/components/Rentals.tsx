@@ -77,7 +77,7 @@ export function Rentals({ onNavigate }: RentalsProps) {
               <div>
                 <Label className="text-sm font-medium text-gray-700 mb-2 block">Location</Label>
                 <Select value={location} onValueChange={setLocation}>
-                  <SelectTrigger className="border-gray-200 focus:border-yellow-400">
+                  <SelectTrigger className="border-gray-200 focus:border-blue-400">
                     <SelectValue placeholder="Select location" />
                   </SelectTrigger>
                   <SelectContent>
@@ -88,7 +88,7 @@ export function Rentals({ onNavigate }: RentalsProps) {
               <div>
                 <Label className="text-sm font-medium text-gray-700 mb-2 block">Duration</Label>
                 <Select value={duration} onValueChange={setDuration}>
-                  <SelectTrigger className="border-gray-200 focus:border-yellow-400">
+                  <SelectTrigger className="border-gray-200 focus:border-blue-400">
                     <SelectValue placeholder="Select duration" />
                   </SelectTrigger>
                   <SelectContent>
@@ -99,7 +99,7 @@ export function Rentals({ onNavigate }: RentalsProps) {
               <div>
                 <Label className="text-sm font-medium text-gray-700 mb-2 block">Bike Type</Label>
                 <Select value={bikeType} onValueChange={setBikeType}>
-                  <SelectTrigger className="border-gray-200 focus:border-yellow-400">
+                  <SelectTrigger className="border-gray-200 focus:border-blue-400">
                     <SelectValue placeholder="All types" />
                   </SelectTrigger>
                   <SelectContent>
@@ -108,7 +108,7 @@ export function Rentals({ onNavigate }: RentalsProps) {
                 </Select>
               </div>
               <div className="flex items-end">
-                <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-white border-0 h-10">
+                <Button className="w-full bg-blue-400 hover:bg-blue-500 text-white border-0 h-10">
                   <Search className="w-4 h-4 mr-2" />
                   Search
                 </Button>
@@ -128,7 +128,7 @@ export function Rentals({ onNavigate }: RentalsProps) {
                 </div>
                 <div className="absolute top-3 right-3 bg-white/90 rounded-lg px-2 py-1">
                   <div className="flex items-center text-xs">
-                    <Star className="w-3 h-3 mr-1 text-yellow-400 fill-current" />
+                    <Star className="w-3 h-3 mr-1 text-blue-400 fill-current" />
                     <span className="font-medium">{bike.rating}</span>
                   </div>
                 </div>
@@ -161,12 +161,12 @@ export function Rentals({ onNavigate }: RentalsProps) {
                   <div>
                     <p className="text-xs text-gray-500 mb-2">Included</p>
                     <div className="flex flex-wrap gap-1">
-                      {bike.features.map((f, i) => <Badge key={i} variant="secondary" className="text-xs bg-yellow-50 text-yellow-800 border-yellow-200">{f}</Badge>)}
+                      {bike.features.map((f, i) => <Badge key={i} variant="secondary" className="text-xs bg-blue-50 text-blue-800 border-blue-200">{f}</Badge>)}
                     </div>
                   </div>
 
                   <div className="flex gap-2">
-                    <Button disabled={!bike.available} className="flex-1 bg-yellow-400 hover:bg-yellow-500 text-white border-0 rounded-lg disabled:bg-gray-300 disabled:text-gray-500">
+                    <Button disabled={!bike.available} className="flex-1 bg-blue-400 hover:bg-blue-500 text-white border-0 rounded-lg disabled:bg-gray-300 disabled:text-gray-500">
                       <Calendar className="w-4 h-4 mr-1" />
                       {bike.available ? 'Book Now' : 'Not Available'}
                     </Button>

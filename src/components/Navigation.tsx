@@ -100,39 +100,33 @@ export function Navigation({ currentPage, onNavigate, onLogout, compareCount, ca
     setIsMobileMenuOpen(false);
   };
 
-  return (
+   return (
     <>
       {/* Desktop Navigation */}
-      <motion.nav 
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm"
+    <motion.nav 
+  initial={{ y: -100 }}
+  animate={{ y: 0 }}
+  className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm"
+>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center h-12 lg:h-14">
+      
+      {/* Logo on the left */}
+      <motion.div 
+        className="flex items-center cursor-pointer mr-auto"
+        onClick={() => handleNavigate('home')}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-12 lg:h-14">
-            {/* Logo */}
-            <motion.div 
-              className="flex items-center cursor-pointer group" 
-              onClick={() => handleNavigate('home')}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <motion.div 
-                className="flex items-center justify-center w-8 h-8 bg-gradient-to-r from-accent to-blue-500 rounded-lg mr-2 shadow-md group-hover:shadow-lg transition-shadow duration-300"
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.6 }}
-              >
-                <span className="text-sm text-white font-bold">V</span>
-              </motion.div>
-              <motion.span 
-                className="text-xl font-bold text-primary"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-              >
-                CycloRooF
-              </motion.span>
-            </motion.div>
+        <motion.img
+          src="/bikes/1.jpg"
+          alt="V Image"
+          className="w-8 h-8 rounded-lg mr-2 shadow-lg object-cover"
+          whileHover={{ rotate: 360, scale: 1.1 }}
+          transition={{ duration: 0.6 }}
+        />
+        
+      </motion.div>
 
             {/* Desktop Menu */}
             <motion.div 
@@ -248,6 +242,21 @@ export function Navigation({ currentPage, onNavigate, onLogout, compareCount, ca
               </motion.div>
             </motion.div>
 
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+  <Button
+    variant={currentPage === 'about' ? 'default' : 'ghost'}
+    onClick={() => handleNavigate('about')} // make sure 'about' is handled in handleNavigate
+    className={`transition-all duration-300 ${
+      currentPage === 'about'
+        ? 'bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg'
+        : 'text-foreground hover:text-accent hover:bg-accent/10'
+    }`}
+  >
+    About
+  </Button>
+</motion.div>
+
+
             {/* Right Side Actions */}
             <motion.div 
               className="flex items-center space-x-4"
@@ -356,13 +365,14 @@ export function Navigation({ currentPage, onNavigate, onLogout, compareCount, ca
                 <SheetContent side="left" className="w-80 bg-gradient-to-b from-background to-card border-border backdrop-blur-sm">
                   <SheetHeader>
                     <SheetTitle className="flex items-center text-left">
-                      <motion.div 
-                        className="flex items-center justify-center w-8 h-8 bg-gradient-to-r from-accent to-yellow-600 rounded-lg mr-3 shadow-lg"
-                        whileHover={{ rotate: 360, scale: 1.1 }}
-                        transition={{ duration: 0.6 }}
-                      >
-                        <span className="text-sm text-primary font-bold">V</span>
-                      </motion.div>
+                      <motion.img
+  src="/bikes/1.jpg"
+  alt="V Image"
+  className="w-8 h-8 rounded-lg mr-3 shadow-lg object-cover"
+  whileHover={{ rotate: 360, scale: 1.1 }}
+  transition={{ duration: 0.6 }}
+/>
+
                       <motion.span
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}

@@ -90,7 +90,7 @@ export function BikeDetails({ bike, onAddToCompare, onNavigate }: BikeDetailsPro
             {/* Gallery Thumbnails */}
             <div className="grid grid-cols-4 gap-4">
               {[1, 2, 3, 4].map((index) => (
-                <Card key={index} className="border-2 border-transparent hover:border-yellow-400 cursor-pointer transition-colors">
+                <Card key={index} className="border-2 border-transparent hover:border-blue-400 cursor-pointer transition-colors">
                   <ImageWithFallback
                     src={bike.image}
                     alt={`${bike.name} view ${index}`}
@@ -106,14 +106,14 @@ export function BikeDetails({ bike, onAddToCompare, onNavigate }: BikeDetailsPro
             {/* Basic Info */}
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <Badge variant="outline" className="text-orange-500 border-orange-200">
+                <Badge variant="outline" className="text-blue-500 border-blue-200">
                   {bike.brand}
                 </Badge>
                 <div className="flex items-center">
-                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <Star className="w-4 h-4 text-blue-400 fill-current" />
+                  <Star className="w-4 h-4 text-blue-400 fill-current" />
+                  <Star className="w-4 h-4 text-blue-400 fill-current" />
+                  <Star className="w-4 h-4 text-blue-400 fill-current" />
                   <Star className="w-4 h-4 text-gray-300" />
                   <span className="text-sm text-gray-600 ml-2">(4.2)</span>
                 </div>
@@ -135,7 +135,7 @@ export function BikeDetails({ bike, onAddToCompare, onNavigate }: BikeDetailsPro
             {/* Action Buttons */}
             <div className="grid grid-cols-2 gap-4">
               <Button 
-                className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-white border-0 h-14 rounded-xl shadow-lg"
+                className="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white border-0 h-14 rounded-xl shadow-lg"
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Test Ride
@@ -143,16 +143,16 @@ export function BikeDetails({ bike, onAddToCompare, onNavigate }: BikeDetailsPro
               <Button 
                 onClick={() => onAddToCompare(bike)}
                 variant="outline"
-                className="border-gray-200 hover:bg-yellow-50 hover:border-yellow-300 h-14 rounded-xl"
+                className="border-gray-200 hover:bg-blue-50 hover:border-blue-300 h-14 rounded-xl"
               >
-                <GitCompare className="w-5 h-5 mr-2 text-orange-500" />
+                <GitCompare className="w-5 h-5 mr-2 text-blue-500" />
                 Add to Compare
               </Button>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               <Button 
-                className="bg-orange-500 hover:bg-orange-600 text-white border-0 h-14 rounded-xl"
+                className="bg-blue-500 hover:bg-blue-600 text-white border-0 h-14 rounded-xl"
               >
                 <Car className="w-5 h-5 mr-2" />
                 Rent Now
@@ -161,7 +161,7 @@ export function BikeDetails({ bike, onAddToCompare, onNavigate }: BikeDetailsPro
                 variant="outline"
                 className="border-gray-200 hover:bg-gray-50 h-14 rounded-xl"
               >
-                <Shield className="w-5 h-5 mr-2 text-orange-500" />
+                <Shield className="w-5 h-5 mr-2 text-blue-500" />
                 Check EMI
               </Button>
             </div>
@@ -174,8 +174,8 @@ export function BikeDetails({ bike, onAddToCompare, onNavigate }: BikeDetailsPro
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
-                      <Settings className="w-5 h-5 text-orange-500" />
+                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <Settings className="w-5 h-5 text-blue-500" />
                     </div>
                     <div>
                       <p className="text-sm text-gray-600">Engine</p>
@@ -183,8 +183,8 @@ export function BikeDetails({ bike, onAddToCompare, onNavigate }: BikeDetailsPro
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
-                      <Zap className="w-5 h-5 text-orange-500" />
+                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <Zap className="w-5 h-5 text-blue-500" />
                     </div>
                     <div>
                       <p className="text-sm text-gray-600">Power</p>
@@ -192,8 +192,8 @@ export function BikeDetails({ bike, onAddToCompare, onNavigate }: BikeDetailsPro
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
-                      <Fuel className="w-5 h-5 text-orange-500" />
+                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <Fuel className="w-5 h-5 text-blue-500" />
                     </div>
                     <div>
                       <p className="text-sm text-gray-600">Mileage</p>
@@ -201,8 +201,8 @@ export function BikeDetails({ bike, onAddToCompare, onNavigate }: BikeDetailsPro
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
-                      <Settings className="w-5 h-5 text-orange-500" />
+                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <Settings className="w-5 h-5 text-blue-500" />
                     </div>
                     <div>
                       <p className="text-sm text-gray-600">Torque</p>
@@ -238,7 +238,7 @@ export function BikeDetails({ bike, onAddToCompare, onNavigate }: BikeDetailsPro
               <div className="grid md:grid-cols-2 gap-3">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                    <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                     <span className="text-gray-700">{feature}</span>
                   </div>
                 ))}
@@ -256,7 +256,7 @@ export function BikeDetails({ bike, onAddToCompare, onNavigate }: BikeDetailsPro
                 {specifications.map((spec, index) => (
                   <div key={index} className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0">
                     <div className="flex items-center space-x-2">
-                      <spec.icon className="w-4 h-4 text-orange-500" />
+                      <spec.icon className="w-4 h-4 text-blue-500" />
                       <span className="text-gray-600">{spec.label}</span>
                     </div>
                     <span className="font-semibold text-gray-900">{spec.value}</span>
@@ -268,7 +268,7 @@ export function BikeDetails({ bike, onAddToCompare, onNavigate }: BikeDetailsPro
               
               <div className="space-y-3">
                 <h4 className="font-semibold text-gray-900">Financing Options</h4>
-                <div className="bg-yellow-50 rounded-lg p-4">
+                <div className="bg-blue-50 rounded-lg p-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-gray-700">EMI starts from</span>
                     <span className="font-bold text-gray-900">₹{Math.round(bike.price / 36).toLocaleString()}/month</span>
@@ -281,7 +281,7 @@ export function BikeDetails({ bike, onAddToCompare, onNavigate }: BikeDetailsPro
                 <Button 
                   onClick={() => onNavigate('calculators')}
                   variant="outline" 
-                  className="w-full border-yellow-300 text-yellow-700 hover:bg-yellow-50"
+                  className="w-full border-blue-300 text-blue-700 hover:bg-blue-50"
                 >
                   Calculate EMI
                 </Button>
@@ -306,7 +306,7 @@ export function BikeDetails({ bike, onAddToCompare, onNavigate }: BikeDetailsPro
                   <p className="text-gray-600 text-sm mb-2">{bike.brand}</p>
                   <div className="flex justify-between items-center">
                     <span className="font-bold text-gray-900">₹{(bike.price + index * 10000).toLocaleString()}</span>
-                    <Button size="sm" className="bg-yellow-400 hover:bg-yellow-500 text-white border-0">
+                    <Button size="sm" className="bg-blue-400 hover:bg-blue-500 text-white border-0">
                       View
                     </Button>
                   </div>

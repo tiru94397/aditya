@@ -505,42 +505,54 @@ export function HomePage({ onNavigate, onAddToCart }: HomePageProps) {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary to-accent text-primary-foreground py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Welcome to <span className="text-accent-foreground">CycloRoof</span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Your Ultimate Two-Wheeler Marketplace
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-                onClick={() => onNavigate('catalog')}
-              >
-                Browse All Bikes
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button 
-                size="lg"
-                className="bg-accent hover:bg-accent/90"
-                onClick={() => onNavigate('spares')}
-              >
-                Shop Spare Parts
-                <Settings className="ml-2 w-5 h-5" />
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      {/* Hero Section */}
+<section className="relative bg-gradient-to-r from-primary to-accent text-primary-foreground py-20">
+  {/* Hero Image */}
+  <div className="absolute inset-0 z-0">
+    <img 
+      src="/bikes/1.jpg" 
+      alt="Hero Image" 
+      className="w-full h-full object-cover opacity-70" 
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-primary/60 to-accent/60"></div>
+  </div>
+
+  <div className="container mx-auto px-4 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="text-center"
+    >
+      <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        Welcome to <span className="text-accent-foreground">CycloRooF</span>
+      </h1>
+      <p className="text-xl md:text-2xl mb-8 opacity-90">
+        Your Ultimate Two-Wheeler Marketplace
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button 
+          size="lg" 
+          variant="outline" 
+          className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+          onClick={() => onNavigate('catalog')}
+        >
+          Browse All Bikes
+          <ArrowRight className="ml-2 w-5 h-5" />
+        </Button>
+        <Button 
+          size="lg"
+          className="bg-accent hover:bg-accent/90"
+          onClick={() => onNavigate('spares')}
+        >
+          Shop Spare Parts
+          <Settings className="ml-2 w-5 h-5" />
+        </Button>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
 
       {/* Featured Bikes Carousel */}
       <section className="py-16 bg-muted/30">
@@ -671,7 +683,7 @@ export function HomePage({ onNavigate, onAddToCart }: HomePageProps) {
             transition={{ duration: 0.8 }}
           >
             <Crown className="w-16 h-16 mx-auto mb-6 text-accent-foreground" />
-            <h2 className="text-4xl font-bold mb-6">CycloRoof Elite Membership</h2>
+            <h2 className="text-4xl font-bold mb-6">CycloRooF Elite Membership</h2>
             <p className="text-xl mb-8 opacity-90">
               Exclusive benefits, priority service, and special discounts for our premium members
             </p>

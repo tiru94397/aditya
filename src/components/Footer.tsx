@@ -78,7 +78,7 @@ export function Footer({ onNavigate }: FooterProps) {
             </Button>
           </div>
           <p className="text-sm text-accent-foreground/80 mt-4">
-            Join 50,000+ riders who trust Cycloroof for their mobility needs
+            Join 50,000+ riders who trust CycloRooF for their mobility needs
           </p>
         </div>
       </div>
@@ -89,11 +89,16 @@ export function Footer({ onNavigate }: FooterProps) {
           <div className="grid lg:grid-cols-5 gap-8">
             {/* Company Info */}
             <div className="lg:col-span-2">
-              <div className="flex items-center mb-6">
-                <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-r from-accent to-yellow-600 rounded-xl mr-3 shadow-lg">
-                  <span className="text-lg text-primary">🏍️</span>
+  <div className="flex items-center mb-6">
+    <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-r from-accent to-yellow-600 rounded-xl mr-3 shadow-lg overflow-hidden">
+      <img 
+        src="/bikes/1.jpg" 
+        alt="Bike" 
+        className="w-full h-full object-cover"
+      />
+
                 </div>
-                <span className="text-2xl font-bold">Cycloroof</span>
+                <span className="text-2xl font-bold">CycloRooF</span>
               </div>
               <p className="text-primary-foreground/80 mb-6 leading-relaxed">
                 India's most trusted two-wheeler marketplace. Buy, compare, rent, and service 
@@ -104,11 +109,15 @@ export function Footer({ onNavigate }: FooterProps) {
               <div className="space-y-3">
                 <div className="flex items-center text-primary-foreground/80">
                   <Phone className="w-4 h-4 mr-3 text-accent" />
-                  <span>1800-CYCLOROOF (24/7 Support)</span>
+                  <span>Crafted with passion by Aditya Surampalem ✨</span>
+                </div>
+                <div className="flex items-center text-primary-foreground/80">
+                  <Phone className="w-4 h-4 mr-3 text-accent" />
+                  <span>1800-CycloRooF (24/7 Support)</span>
                 </div>
                 <div className="flex items-center text-primary-foreground/80">
                   <Mail className="w-4 h-4 mr-3 text-accent" />
-                  <span>support@cycloroof.com</span>
+                  <span>cycloroof@gmail.com</span>
                 </div>
                 <div className="flex items-center text-primary-foreground/80">
                   <MapPin className="w-4 h-4 mr-3 text-accent" />
@@ -198,7 +207,7 @@ export function Footer({ onNavigate }: FooterProps) {
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             {/* Copyright */}
             <div className="text-primary-foreground/60 text-sm">
-              © 2024 Cycloroof. All rights reserved. Making mobility smarter, safer, and sustainable.
+              © 2025 CycloRooF. All rights reserved. Making mobility smarter, safer, and sustainable. Made with ❤️ in India by Team CycloRooF. Made by Tiru
             </div>
 
             {/* Legal Links */}
